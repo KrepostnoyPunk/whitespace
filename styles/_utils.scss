@@ -1,0 +1,24 @@
+// ограничивает максимальную ширину контейнера на экранах большего разрешения + выравнивание по горизонтали + отступы по горизонтали
+.container{
+    max-width: calc(var(--container-width) * 2);
+    margin-inline: auto;
+    padding-inline: var(--inline-padding);
+}
+
+// помогает скрыть нужные для CEO, но не нужные для пользователя, элементы 
+.visually-hidden{ 
+    @include visually-hidden;
+} 
+
+// скроют опредленные элементы на мобильном экране
+.mobile-hidden{
+    @include mobile{
+        display: none !important;
+    }
+}
+
+.mobile-visible{
+    @include mobile-above{
+        display: none !important;
+    }
+}

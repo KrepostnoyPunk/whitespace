@@ -1,0 +1,23 @@
+.btn{
+    @include flex-center(true);
+
+    height: var(--btn-height);
+    border-radius: var(--btn-border-radius);
+    background-color: var(--color-accent);
+    border: none;
+    padding: 20px 40px;
+    color: var(--color-white);
+
+    &:hover{
+        opacity: .9;
+    }
+
+    &--yellow{
+        background-color: var(--color-accent-alt);
+        color: var(--color-dark);
+    }
+
+    &--arrowed{
+        column-gap: 10px;
+    }
+}

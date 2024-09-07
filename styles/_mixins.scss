@@ -1,0 +1,61 @@
+// формула расчета адаптирующегося размера текста
+@mixin elastic-text ($min: 16px, $max: 72px) {
+    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+}
+
+// сброс стилей ссылок
+@mixin reset-link {
+    color: inherit;
+
+    // статичная + при наведении
+    &, 
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+// сброс стилей кнопки
+@mixin reset-btn {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+// центрирование через flex
+@mixin flex-center ($isInline: false){
+    @if $isInline {
+        display: inline-flex;
+    } @else {
+        display: flex;
+    }
+
+    justify-content: center;
+    align-items: center;
+}
+
+// центрирование через absolute
+@mixin absolute-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+// задает размер 1 к 1
+@mixin square ($size){
+    width: $size;
+    aspect-ratio: 1;
+}
+
+@mixin visually-hidden{
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}

@@ -1,0 +1,35 @@
+.header{
+    font-weight: 500;
+    // стили контейнера
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: 16px 32px;
+        column-gap: 75px;
+    }
+    // прижатие менб вправо
+    &__menu{
+        margin-left: auto;
+        // позиционирование элементов внутри списка
+        &__list{
+            display: flex;
+            align-items: center;
+            column-gap: 32px;
+        }
+
+        &__item{
+            svg{
+                margin-left: 10px;
+            }
+
+            @include hover{
+                cursor: default;
+                text-decoration: underline;
+                color: var(--color-accent-alt);
+            }
+        }
+    }
+}

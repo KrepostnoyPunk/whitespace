@@ -1,0 +1,19 @@
+.dropdown{
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+
+    &__content{
+        display: none;
+        position: absolute;
+        background-color: var(--color-primary);
+        width: 110px;
+        padding: 10px;
+    }
+
+    @include hover{
+        .content{
+            display: block;
+        }
+    }
+}
