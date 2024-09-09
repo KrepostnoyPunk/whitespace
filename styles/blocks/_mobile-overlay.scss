@@ -1,0 +1,29 @@
+.mobile-overlay{
+    // увеличение размера модального окна
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+
+    // расширение дефолтного размера модального окна
+    &:modal{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    // позиционирование кнопки
+    &__close-btn-wrapper{
+        display: flex;
+        justify-content: end;
+    }
+
+    &__list{
+        // центрирование списка через flex
+        @include flex-center;
+
+        // изменение направления айтемов т.к. по умолчанию - row
+        flex-direction: column;
+        row-gap: 30px;
+        min-height: 80vh;
+    }
+}

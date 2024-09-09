@@ -11,14 +11,15 @@
 } 
 
 // скроют опредленные элементы на мобильном экране
-.mobile-hidden{
-    @include mobile{
+.tablet-hidden{
+    @include tablet{
         display: none !important;
     }
 }
 
-.mobile-visible{
-    @include mobile-above{
+// special для бургера
+.desktop-hidden{
+    @include desktop-3-above{
         display: none !important;
     }
 }

@@ -1,21 +1,56 @@
-$desktop-above: 1284px;
-$desktop: 1283px;
+$desktop-1-above: 1921px;
 
-$tablet-above: 1024px;
-$tablet: 1023px;
+// от 1441 до 1920
+$desktop-1: 1920px;
+$desktop-2-above: 1441px;
 
-$mobile-above: 768px;
-$mobile: 767px;
+// от 1153 до 1440
+$desktop-2: 1440px;
+$desktop-3-above: 1153px;
+
+// от 769 до 1152
+$desktop-3: 1152px;
+$tablet-above: 769px;
+
+// от 321 до 768
+$tablet: 768px;
+$mobile-above: 321px;
+// с 320
+$mobile: 320px;
 
 // миксины позволяющие вписывать медиа запросы непосредственно в селектор тем самым уменьшая объем и путаницу медиа запросов
-@mixin desktop-above {
-    @media (min-width: $desktop-above) {
+@mixin desktop-1-above {
+    @media (min-width: $desktop-1-above) {
         @content;
     }
 }
 
-@mixin desktop {
-    @media (max-width: $desktop) {
+@mixin desktop-1 {
+    @media (max-width: $desktop-1) {
+        @content;
+    }
+}
+
+@mixin desktop-2-above {
+    @media (min-width: $desktop-2-above) {
+        @content;
+    }
+}
+
+@mixin desktop-2 {
+    @media (max-width: $desktop-2) {
+        @content;
+    }
+}
+
+@mixin desktop-3-above {
+    @media (min-width: $desktop-3-above) {
+        @content;
+    }
+}
+
+@mixin desktop-3 {
+    @media (max-width: $desktop-3) {
         @content;
     }
 }

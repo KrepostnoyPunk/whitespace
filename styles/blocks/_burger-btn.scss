@@ -1,0 +1,28 @@
+.burger-btn{
+
+    // сброс стилей кнопки
+    @include reset-btn;
+
+    // масштабирование 1 к 1
+    @include square (42px);
+
+    // для центрирования через absolute
+    position: relative;
+    border-radius: 7px;
+
+    &::after{
+
+        // центрирование через absolute
+        @include absolute-center;
+
+        // отрисовка полоски
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-white);
+        border-radius: 2px;
+
+        // отрисовка дполнительной полоски через shadow
+        box-shadow: 0 -8px var(--color-white), 0 8px var(--color-white);
+    }
+}

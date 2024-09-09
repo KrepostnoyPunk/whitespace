@@ -1,5 +1,12 @@
 .header{
     font-weight: 500;
+    // media
+    &__logo{
+        @include mobile{
+            flex-shrink: 1;
+        }
+    }
+
     // стили контейнера
     &__inner{
         display: flex;
@@ -9,6 +16,19 @@
         color: var(--color-white);
         padding: 16px 32px;
         column-gap: 75px;
+        // media
+        @include desktop-2{
+            column-gap: 25px;
+        }
+        // media
+        @include desktop-3{
+            column-gap: 25px;
+        }
+        // media
+        @include tablet{
+            padding: 16px;
+            column-gap: 75px;
+        }
     }
     // прижатие менб вправо
     &__menu{
@@ -21,15 +41,27 @@
         }
 
         &__item{
-            svg{
+            // позиционирование для dropdown
+            position: relative;
+            // отступ от иконки 
+            .fa{
+                display: inline-flex;
                 margin-left: 10px;
             }
 
             @include hover{
-                cursor: default;
-                text-decoration: underline;
-                color: var(--color-accent-alt);
+                cursor: pointer;
             }
         }
+        // media
+        @include desktop-3{
+            display: none;
+        }
+    }
+    // позиционирование элементов в actions
+    &__actions{
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
     }
 }

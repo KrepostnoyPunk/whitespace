@@ -26,13 +26,15 @@
     // ширина контентного контейнера
     --container-width: 1376px;
 
-    // отступы
+    // отступ от контейнера
     --inline-padding: 32px;
+
+    // отступ между секциями
     --section-padding-y: 70px;
 
     // высота кнопок
     --btn-height: 60px;
 
     // длительность анимции
-    --transition-duration: .2s;
+    --transition-duration: .2s ease-in-out;
 }

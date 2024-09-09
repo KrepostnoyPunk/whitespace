@@ -1,0 +1,35 @@
+.cross-btn{
+
+    // сброс стилей кнопки
+    @include reset-btn;
+
+    // масштабирование 1 к 1
+    @include square(48px);
+
+    // для центрирования через absolute
+    position: relative;
+    border-radius: 7px;
+
+    // общие стили для before и after
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50;
+        left: 7px;
+        width: 70%;
+        height: 2px;
+        background-color: black;
+        border-radius: 2px;
+    }
+
+    // поворот before
+    &::before{
+        rotate: 45deg;
+    }
+
+    // поворот after
+    &::after{
+        rotate: -45deg;
+    }
+}

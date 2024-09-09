@@ -1,19 +1,23 @@
 .dropdown{
-    display: inline-block;
-    flex-direction: column;
-    position: relative;
 
-    &__content{
-        display: none;
-        position: absolute;
+    ul{
         background-color: var(--color-primary);
-        width: 110px;
-        padding: 10px;
     }
 
-    @include hover{
-        .content{
-            display: block;
-        }
+    &__submenu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        transition: var(--transition-duration);
+        visibility: hidden;
+        opacity: 0;
+        background-color: var(--color-accent);
     }
+
+    &__item:hover &__submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+
 }
