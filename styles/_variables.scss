@@ -8,7 +8,7 @@
     --color-shadow: #000000;
 
     // рамка
-    --border: 1px solid var(--color-accent-alt);
+    --border-yellow: 1px solid var(--color-accent-alt);
 
     // радиус углов рамки
     --btn-border-radius: 8px;
@@ -34,6 +34,10 @@
 
     // высота кнопок
     --btn-height: 60px;
+
+    // line height
+    --title-l-h: 70px;
+    --default-l-h: 30px;
 
     // длительность анимции
     --transition-duration: .2s ease-in-out;

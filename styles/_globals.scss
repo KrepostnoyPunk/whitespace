@@ -4,7 +4,6 @@ body{
 
     @include elastic-text(16, 18);
 
-    line-height: 30px;
     color: var(--color-dark);
     background-color: var(--color-white);
 }

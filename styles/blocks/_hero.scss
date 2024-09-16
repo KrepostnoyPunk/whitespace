@@ -1,0 +1,71 @@
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+
+    @include tablet{
+        flex-direction: column;
+        row-gap: 100px;
+    }
+
+    @include mobile{
+        padding-block: 40px;
+    }
+    
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 24px;
+        line-height: var(--title-l-h);
+        max-width: 691px;
+        
+
+        p{ 
+            line-height: var(--default-l-h);
+            margin-bottom: 60px;
+        }
+
+        @include desktop-3{
+            max-width: 532px;
+        }
+
+        @include tablet{
+            max-width: 480px;
+            text-align: center;
+            row-gap: 24px;
+        }
+
+        @include mobile{
+            line-height: 44px;
+        }
+    }
+
+    &__btn{
+        @include tablet{
+            align-self: center;
+        }
+    }
+
+    &__img{
+        max-width: 685px;
+        width: 100%;
+        height: auto;
+        
+        @include desktop-3{
+            max-width: 526px;
+            width: 55%;
+        }
+
+        @include tablet{
+            max-width: 551px;
+            width: 100%;
+        }
+
+        @include mobile{
+            min-width: 286px;
+            width: 100%;
+        }
+    }
+}

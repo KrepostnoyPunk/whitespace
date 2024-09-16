@@ -7,9 +7,13 @@
     border: none;
     padding: 20px 40px;
     color: var(--color-white);
+    transition: var(--transition-duration);
 
     &:hover{
-        opacity: .9;
+        @include hover{
+            opacity: .7;
+            color: black;
+        }
     }
 
     &--yellow{

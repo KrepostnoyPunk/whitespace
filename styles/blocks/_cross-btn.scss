@@ -32,4 +32,10 @@
     &::after{
         rotate: -45deg;
     }
+
+    @include hover{
+        opacity: .7;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
 }

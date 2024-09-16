@@ -25,4 +25,10 @@
         // отрисовка дполнительной полоски через shadow
         box-shadow: 0 -8px var(--color-white), 0 8px var(--color-white);
     }
+
+    @include hover{
+        opacity: .7;
+        cursor: pointer;
+        transition: var(--transition-duration);
+    }
 }

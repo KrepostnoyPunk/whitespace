@@ -1,0 +1,111 @@
+.content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 20px;
+
+        &--double{
+            margin-bottom: 100px;
+
+            &--second{
+                column-gap: 60px;
+
+                @include tablet{
+                    column-gap: 33px;
+                }
+            }
+        }
+
+        @include tablet{
+            flex-direction: column;
+            row-gap: 60px;
+        }
+    
+        @include mobile{
+            padding-block: 40px;
+        }
+        
+        &__header{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 24px;
+            line-height: var(--title-l-h);
+            max-width: 620px;
+
+            &--second{
+                max-width: 633px;
+            }
+
+            h2{
+                @include tablet{
+                    align-self: center;
+                }
+
+                @include desktop-3{
+                    line-height: 50px;
+                }
+            }
+            
+            p{ 
+                line-height: var(--default-l-h);
+                margin-bottom: 60px;
+
+                @include desktop-3{
+                    margin-bottom: 20px;
+                }
+            }
+    
+            @include desktop-3{
+                max-width: 450px;
+            }
+    
+            @include tablet{
+                max-width: 728px;
+                text-align: center;
+                row-gap: 24px;
+            }
+    
+            @include mobile{
+                line-height: 44px;
+            }
+        }
+    
+        &__btn{
+            @include tablet{
+                align-self: center;
+            }
+        }
+    
+        &__img{
+            max-width: 719px;
+            width: 100%;
+            height: auto;
+            
+            @include desktop-3{
+                max-width: 527px;
+                width: 55%;
+            }
+    
+            @include tablet{
+                max-width: 561px;
+                width: 100%;
+            }
+
+            &--second{
+                @include tablet-above{
+                    order: -1;
+                }
+
+                @include tablet{
+                    max-width: 454px;
+                    width: 100%;
+                }
+            }
+    
+            @include mobile{
+                min-width: 286px;
+                width: 100%;
+            }
+        }
+}

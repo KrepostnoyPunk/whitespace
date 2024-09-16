@@ -94,20 +94,16 @@
                 </ul>
             </nav>
             <div class="header__actions">
-                <button class="header__btn btn tablet-hidden btn--yellow">
-                    <a href="#logInPage" class="header__btn__link">
+                    <a href="#logInPage" class="header__btn btn tablet-hidden btn--yellow header__btn__link">
                         Login
                     </a>
-                </button>
-                <button class="header__btn btn tablet-hidden btn--arrowed">
-                    <a href="#tryForFreePage" class="header__btn__link">
+                    <a href="#tryForFreePage" class="header__btn__link header__btn btn tablet-hidden btn--arrowed">
                         Try Whitepace free
+                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6H11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 1L11 6L6 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </a>
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 6H11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 1L11 6L6 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
                 <!-- burger btn -->
                 <button 
                 class="header__btn__burger burger-btn desktop-hidden"
@@ -118,7 +114,92 @@
             
         </div>
      </header>
-
+     <!-- main -->
+      <main class="main">
+        <!-- HERO section -->
+         <section class="section container section--primary section--waved">
+                <div class="section__body">
+                    <div class="hero">
+                        <header class="hero__header">
+                            <h1 class="hero__title">
+                                Get More Done with whitepace
+                            </h1>
+                            <p>
+                                Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks
+                            </p>
+                            <a href="#" class="hero__btn btn btn--arrowed"">
+                                Try Whitepace free
+                                <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6H11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 1L11 6L6 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </header>
+                        <img 
+                        src="./assets/images/hero.jpg" 
+                        alt="" 
+                        class="hero__img"
+                        width="685"
+                        height="456"
+                        >
+                    </div>
+         </section>
+         <!-- CONTENT section -->
+         <section class="section container section--double">
+            <div class="section__body">
+                <div class="content content--double">
+                    <header class="content__header">
+                        <h2 class="content__title">
+                            Project Management
+                        </h2>
+                        <p>
+                            Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.
+                        </p>
+                        <a href="#" class="content__btn btn btn--arrowed"">
+                            Get Started
+                            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 6H11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 1L11 6L6 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </header>
+                    <img 
+                    src="./assets/images/content-1.jpg" 
+                    alt="" 
+                    class="content__img"
+                    width="719"
+                    height="448"
+                    >
+                </div>
+                <!-- 2 элемент -->
+                <div class="content content--double--second">
+                    <header class="content__header content__header--second">
+                        <h2 class="content__title content__title--second">
+                            Work together
+                        </h2>
+                        <p>
+                            With whitepace, share your notes with your colleagues and collaborate on them.
+                            You can also publish a note to the internet and share the URL with others.
+                        </p>
+                        <a href="#" class="content__btn btn btn--arrowed"">
+                            Try it now
+                            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 6H11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 1L11 6L6 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </header>
+                    <img 
+                    src="./assets/images/work-together.svg" 
+                    alt="" 
+                    class="content__img content__img--second"
+                    width="583"
+                    height="542"
+                    >
+                </div>
+            </div>
+         </section>
+      </main>
      <!-- модальное окно для бургер кнопки -->
      <dialog class="mobile-overlay " id="mobileOverlay">
         <!-- кнопка закрытия модального окна -->

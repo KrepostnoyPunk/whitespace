@@ -1,0 +1,77 @@
+.section{
+    // отступ между секциями
+    padding-block: var(--section-padding-y);
+
+    // модификатор заднего фона секции
+    &--primary{
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    // модификатор для фоновой фигуры волны
+    &--waved{
+        z-index: 2;
+        position: relative;
+        overflow-x: hidden;
+
+        &::after{
+            content: url('/assets/images/bg-waves.png');
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            top: 124px;
+            
+            @include desktop-3{
+                content: url('/assets/images/bg-waves.png');
+                left: 0px;
+                top: 74px;
+            }
+    
+            @include tablet{
+                content: url('/assets/images/bg-waves-tablet.png');
+                left: 0px;
+                top: 124px;
+            }
+
+            @include mobile{
+                content: url('/assets/images/bg-waves-mobile.png');
+                left: -4px;
+                top: -34px;
+            }
+        }
+    }
+
+    // модификатор для фоновой фигуры в double
+    &--double{
+        z-index: 2;
+        position: relative;
+        overflow-x: hidden;
+
+        &::after{
+            content: url('/assets/images/double-section.png');
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            top: 7px;
+            
+            @include desktop-3{
+                content: url('/assets/images/double-section-desktop-3.png');
+                left: 0px;
+                top: 62px;
+            }
+    
+            @include tablet{
+                content: url('/assets/images/double-section-tablet.png');
+                left: 0px;
+                top: 31px;
+            }
+
+            @include mobile{
+                content: url('/assets/images/double-section-mobile.png');
+                left: 0px;
+                top: 39px;
+            }
+        }
+
+    }
+}
