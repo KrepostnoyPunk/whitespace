@@ -1,0 +1,88 @@
+.underline{
+    position: relative;
+
+    // L--1
+    &--large--1::after{
+        content: url('/assets/icons/underline--large.png');
+        position: absolute;
+        left: 0px;
+        bottom: -30px;
+        z-index: -1;
+        max-width: 300px;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--large--d3.png');
+            left: 140px;
+            bottom: -35px;
+            padding-right: 40px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--large--tablet.png');
+            bottom: -25px;
+            left: 190px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--large--tablet.png');
+            bottom: -27px;
+            left: 0px;
+        }
+    }
+
+    // L--2
+    &--large--2::after{
+        content: url('/assets/icons/underline--large--2.png');
+        position: absolute;
+        left: 190px;
+        bottom: -22px;
+        z-index: -1;
+        max-width: 300px;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--large--2--d3.png');
+            bottom: -5px;
+            left: 150px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--large--2--tablet.svg');
+            bottom: -27px;
+            left: 137px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--large--2--mobile.png');
+            bottom: -5px;
+            left: 55px;
+        }
+    }
+
+    // 
+    &--slim--large::after{
+        content: url('/assets/icons/underline--slim--large.svg');
+        position: absolute;
+        left: 0px;
+        bottom: -30px;
+        z-index: -1;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--slim--large--d3.png');
+            left: 140px;
+            bottom: -35px;
+            padding-right: 40px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--slim--large--tablet.png');
+            bottom: -25px;
+            left: 190px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--slim--large--tablet.png');
+            bottom: -27px;
+            left: 0px;
+        }
+    }
+}

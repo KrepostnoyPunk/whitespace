@@ -7,6 +7,10 @@
         &--double{
             margin-bottom: 100px;
 
+            @include mobile{
+                margin-bottom: 0;
+            }
+
             &--second{
                 column-gap: 60px;
 
@@ -92,7 +96,7 @@
                 width: 100%;
             }
 
-            &--second{
+            &--reverse{
                 @include tablet-above{
                     order: -1;
                 }

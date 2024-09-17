@@ -20,11 +20,11 @@ a{
 }
 
 h1, .h1{
-    @include elastic-text(36, 72);
+    @include elastic-text(54, 72);
 }
 
 h2, .h2{
-    @include elastic-text(32, 64);
+    @include elastic-text(52, 64);
 }
 
 h3, .h3{
