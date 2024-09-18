@@ -1,6 +1,14 @@
 .section{
     // отступ между секциями
     padding-block: var(--section-padding-y);
+    
+    @include tablet{
+        --section-padding-y: 100px;
+    }
+
+    @include mobile{
+        --section-padding-y: 80px;
+    }
 
     // модификатор заднего фона секции
     &--primary{
@@ -19,7 +27,7 @@
             position: absolute;
             z-index: -1;
             left: 0px;
-            top: 124px;
+            top: 184px;
             
             @include desktop-3{
                 content: url('/assets/images/bg-waves.png');

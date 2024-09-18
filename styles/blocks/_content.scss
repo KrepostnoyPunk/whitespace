@@ -2,7 +2,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: 20px;
+        column-gap: 30px;
 
         &--double{
             margin-bottom: 100px;
@@ -17,6 +17,74 @@
                 @include tablet{
                     column-gap: 33px;
                 }
+            }
+        }
+
+        &--reversed{
+            column-gap: 60px;
+        }
+
+        &--plans{
+            flex-direction: column;
+
+            &__description{
+                max-width: 979px;
+                width: 100%;
+            }
+
+            &__wrapper{
+                display: flex;
+                column-gap: 32px;
+                align-items: center;
+                justify-content: center;
+
+                @include tablet{
+                    scroll-snap-type: x mandatory;
+                    overflow-x: scroll;
+                }
+            }
+
+            &__card{
+                scroll-snap-align: start;
+
+                &__inner{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 25px;
+
+                    h4{
+                        margin-block-start: 0em;
+                        margin-block-end: 0em;
+                    }
+
+                    p{
+                        --paragraphMarginBottom: 0px;
+                    }
+                }
+
+                padding: 40px 44px;
+                border: var(--border);
+                border-radius: var(--card-border-radius);
+
+                &--big{
+                    background-color: var(--color-primary);
+                    color: white;
+                    padding: 80px 44px;
+
+                    span{
+                        color: var(--color-accent-alt);
+                    }
+                }
+            }
+
+            &__list{
+                display: flex;
+                flex-direction: column;
+                row-gap: 28px; 
+            }
+
+            &__btn{
+                align-self: flex-start;
             }
         }
 
@@ -36,6 +104,7 @@
             row-gap: 24px;
             line-height: var(--title-l-h);
             max-width: 620px;
+            overflow-x: clip;
 
             &--second{
                 max-width: 633px;
@@ -73,8 +142,14 @@
             @include mobile{
                 line-height: 44px;
             }
+
+            &--plans{
+                max-width: 979px;
+                text-align: center;
+                align-items: center;
+            }
         }
-    
+
         &__btn{
             @include tablet{
                 align-self: center;

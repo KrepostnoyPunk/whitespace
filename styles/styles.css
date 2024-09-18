@@ -185,11 +185,12 @@ svg * {
   --btn-border-radius: 8px;
   --card-border-radius: 10px;
   --circle-border-radius: 50%;
+  --border: 1px solid var(--color-accent-alt);
   --shadow: 15px 10px 50% var(--color-shadow);
   --font-main: "Inter", sans-serif;
   --container-width: 1376px;
   --inline-padding: 32px;
-  --section-padding-y: 70px;
+  --section-padding-y: 140px;
   --btn-height: 60px;
   --title-l-h: 70px;
   --default-l-h: 30px;
@@ -260,7 +261,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: clamp(18px, 1.6666666667vw, 24px);
+  font-size: clamp(24px, 2.5vw, 36px);
 }
 
 .burger-btn {
@@ -313,13 +314,13 @@ h4, .h4 {
 }
 @media (hover: hover) {
   .btn:hover:hover {
-    opacity: 0.7;
+    opacity: 0.9;
     color: black;
   }
 }
 @media (hover: none) {
   .btn:hover:active {
-    opacity: 0.7;
+    opacity: 0.9;
     color: black;
   }
 }
@@ -330,6 +331,23 @@ h4, .h4 {
 .btn--arrowed {
   -moz-column-gap: 10px;
        column-gap: 10px;
+}
+.btn--transparent {
+  background-color: transparent;
+  border: var(--border);
+  color: black;
+}
+@media (hover: hover) {
+  .btn--transparent:hover {
+    background-color: var(--color-accent-alt);
+    color: black;
+  }
+}
+@media (hover: none) {
+  .btn--transparent:active {
+    background-color: var(--color-accent-alt);
+    color: black;
+  }
 }
 
 .cross-btn {
@@ -510,7 +528,6 @@ h4, .h4 {
   left: 0px;
   bottom: -30px;
   z-index: -1;
-  max-width: 300px;
 }
 @media (max-width: 1152px) {
   .underline--large--1::after {
@@ -540,7 +557,6 @@ h4, .h4 {
   left: 190px;
   bottom: -22px;
   z-index: -1;
-  max-width: 300px;
 }
 @media (max-width: 1152px) {
   .underline--large--2::after {
@@ -567,34 +583,98 @@ h4, .h4 {
   content: url("/assets/icons/underline--slim--large.svg");
   position: absolute;
   left: 0px;
-  bottom: -30px;
-  z-index: -1;
+  bottom: -45px;
 }
 @media (max-width: 1152px) {
   .underline--slim--large::after {
     content: url("/assets/icons/underline--slim--large--d3.png");
-    left: 140px;
-    bottom: -35px;
-    padding-right: 40px;
+    left: 120px;
+    bottom: -45px;
   }
 }
 @media (max-width: 768px) {
   .underline--slim--large::after {
     content: url("/assets/icons/underline--slim--large--tablet.png");
-    bottom: -25px;
-    left: 190px;
+    bottom: -23px;
+    left: 260px;
   }
 }
 @media (max-width: 360px) {
   .underline--slim--large::after {
     content: url("/assets/icons/underline--slim--large--tablet.png");
+    bottom: -20px;
+    left: 115px;
+  }
+}
+.underline--large--3::after {
+  content: url("/assets/icons/underline--large--3.png");
+  position: absolute;
+  left: 10px;
+  bottom: -8px;
+  z-index: -1;
+}
+@media (max-width: 1152px) {
+  .underline--large--3::after {
+    content: url("/assets/icons/underline--large--3--d3.png");
+    left: 7px;
     bottom: -27px;
-    left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .underline--large--3::after {
+    content: url("/assets/icons/underline--large--3--tablet.png");
+    bottom: -13px;
+    left: 500px;
+  }
+}
+@media (max-width: 360px) {
+  .underline--large--3::after {
+    content: url("/assets/icons/underline--large--3--mobile.png");
+    bottom: -19px;
+    left: 62px;
+  }
+}
+.underline--large--4::after {
+  content: url("/assets/icons/underline--large--4.png");
+  position: absolute;
+  left: 240px;
+  bottom: -20px;
+  z-index: -1;
+}
+@media (max-width: 1152px) {
+  .underline--large--4::after {
+    content: url("/assets/icons/underline--large--4--d3.png");
+    left: 7px;
+    bottom: -27px;
+  }
+}
+@media (max-width: 768px) {
+  .underline--large--4::after {
+    content: url("/assets/icons/underline--large--4--tablet.png");
+    bottom: -14px;
+    left: 500px;
+  }
+}
+@media (max-width: 360px) {
+  .underline--large--4::after {
+    content: url("/assets/icons/underline--large--4--mobile.png");
+    bottom: -19px;
+    left: 62px;
   }
 }
 
 .section {
   padding-block: var(--section-padding-y);
+}
+@media (max-width: 768px) {
+  .section {
+    --section-padding-y: 100px;
+  }
+}
+@media (max-width: 360px) {
+  .section {
+    --section-padding-y: 80px;
+  }
 }
 .section--primary {
   background-color: var(--color-primary);
@@ -610,7 +690,7 @@ h4, .h4 {
   position: absolute;
   z-index: -1;
   left: 0px;
-  top: 124px;
+  top: 184px;
 }
 @media (max-width: 1152px) {
   .section--waved::after {
@@ -742,8 +822,8 @@ h4, .h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .content--double {
   margin-bottom: 100px;
@@ -763,6 +843,64 @@ h4, .h4 {
          column-gap: 33px;
   }
 }
+.content--reversed {
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+.content--plans {
+  flex-direction: column;
+}
+.content--plans__description {
+  max-width: 979px;
+  width: 100%;
+}
+.content--plans__wrapper {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .content--plans__wrapper {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+  }
+}
+.content--plans__card {
+  scroll-snap-align: start;
+  padding: 40px 44px;
+  border: var(--border);
+  border-radius: var(--card-border-radius);
+}
+.content--plans__card__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.content--plans__card__inner h4 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.content--plans__card__inner p {
+  --paragraphMarginBottom: 0px;
+}
+.content--plans__card--big {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 80px 44px;
+}
+.content--plans__card--big span {
+  color: var(--color-accent-alt);
+}
+.content--plans__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+.content--plans__btn {
+  align-self: flex-start;
+}
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -781,6 +919,7 @@ h4, .h4 {
   row-gap: 24px;
   line-height: var(--title-l-h);
   max-width: 620px;
+  overflow-x: clip;
 }
 .content__header--second {
   max-width: 633px;
@@ -820,6 +959,11 @@ h4, .h4 {
   .content__header {
     line-height: 44px;
   }
+}
+.content__header--plans {
+  max-width: 979px;
+  text-align: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .content__btn {

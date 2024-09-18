@@ -11,7 +11,7 @@
 
     &:hover{
         @include hover{
-            opacity: .7;
+            opacity: .9;
             color: black;
         }
     }
@@ -23,5 +23,16 @@
 
     &--arrowed{
         column-gap: 10px;
+    }
+
+    &--transparent{
+        background-color: transparent;
+        border: var(--border);
+        color: black;
+
+        @include hover{
+            background-color: var(--color-accent-alt);
+            color: black;
+        }
     }
 }
