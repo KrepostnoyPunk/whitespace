@@ -23,3 +23,9 @@
         display: none !important;
     }
 }
+
+.mobile-visible{
+    @include mobile-above{
+        display: none !important;
+    }
+}

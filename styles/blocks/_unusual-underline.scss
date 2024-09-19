@@ -123,20 +123,20 @@
 
         @include desktop-3{
             content: url('/assets/icons/underline--large--4--d3.png');
-            left: 7px;
-            bottom: -27px;
+            left: 210px;
+            bottom: -20px;
         }
 
         @include tablet{
             content: url('/assets/icons/underline--large--4--tablet.png');
             bottom: -14px;
-            left: 500px;
+            left: 210px;
         }
 
         @include mobile{
             content: url('/assets/icons/underline--large--4--mobile.png');
-            bottom: -19px;
-            left: 62px;
+            bottom: -16px;
+            left: 150px;
         }
     }
 }
