@@ -5,6 +5,16 @@
             max-width: 979px;
             text-align: center;
             align-items: center;
+
+            &--blue--waved{
+                @include desktop-3{
+                    max-width: 650px;
+                }
+
+                @include tablet{
+                    max-width: 605px;
+                }
+            }
         }
 
         &__wrapper{

@@ -41,6 +41,12 @@
                 max-width: 633px;
             }
 
+            &--reversed{
+                @include tablet{
+                    order: 1;
+                }
+            }
+
             h2{
                 @include tablet{
                     align-self: center;

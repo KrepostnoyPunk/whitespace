@@ -1,21 +1,25 @@
 .pagination{
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 12px;
 
     &__btn{
         @include reset-btn;
-        @include absolute-center;
-        @include square(12px);
-        
+
         svg{
-            
             color: var(--color-accent);
         }
 
         &--primary{
-            color: var(--color-primary);
+            svg{
+                color: var(--color-primary);
+            }
+            
+        }
+
+        @include hover{
+            opacity: .7;
         }
     }
-
 }

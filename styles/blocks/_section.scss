@@ -3,11 +3,11 @@
     padding-block: var(--section-padding-y);
     
     @include tablet{
-        --section-padding-y: 100px;
+        --section-padding-y: 80px;
     }
 
     @include mobile{
-        --section-padding-y: 80px;
+        --section-padding-y: 40px;
     }
 
     // модификатор заднего фона секции
@@ -81,5 +81,68 @@
             }
         }
 
+    }
+
+    &--blue--waved{
+        z-index: 2;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        &::after{
+            content: url('/assets/images/blue-waved.png');
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            top: -180px;
+            
+            @include desktop-3{
+                content: url('/assets/images/blue-waved.png');
+                left: 0px;
+                top: -168px;
+            }
+    
+            @include tablet{
+                content: url('/assets/images/blue-waved.png');
+                left: 0px;
+                top: -168px;
+            }
+
+            @include mobile{
+                content: url('/assets/images/blue-waved.png');
+                left: 0px;
+                top: -168px;
+            }
+        }
+    }
+
+    &--waved--APPS{
+        z-index: 2;
+        position: relative;
+        overflow-x: clip;
+        overflow-y: clip;
+
+        &::after{
+            content: url('/assets/images/appsBgWaves.png');
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            top: 79px;
+            
+            @include desktop-3{
+                content: url('/assets/images/appsBgWaves--d3.png');
+                top: 0px;
+            }
+    
+            @include tablet{
+                content: url('/assets/images/appsBgWaves--tablet.png');
+                top: 0px;
+            }
+
+            @include mobile{
+                content: url('/assets/images/appsBgWaves--mobile.png');
+                top: -46px;
+            }
+        }
     }
 }

@@ -1,0 +1,33 @@
+.sponsors{
+    &__header{
+        margin-bottom: 100px;
+
+        @include tablet{
+            margin-bottom: 70px;
+        }
+
+        @include mobile{
+            margin-bottom: 35px;
+        }
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 181px;
+
+        @include desktop-3{
+            column-gap: 85px;
+        }
+
+        @include tablet{
+            flex-direction: column;
+            row-gap: 100px;
+        }
+    }
+
+    &__img{
+        height: auto;
+    }
+}

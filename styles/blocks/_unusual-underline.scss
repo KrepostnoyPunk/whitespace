@@ -136,7 +136,115 @@
         @include mobile{
             content: url('/assets/icons/underline--large--4--mobile.png');
             bottom: -16px;
-            left: 150px;
+            left: 155px;
+        }
+    }
+
+    // L--slim--BLUE
+    &--large--slim--BLUE::after{
+        content: url('/assets/icons/underline--large--slim--BLUE.svg');
+        position: absolute;
+        left: 675px;
+        bottom: -17px;
+        z-index: -1;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--large--slim--BLUE--d3.svg');
+            left: 210px;
+            bottom: -26px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--large--slim--BLUE--tablet.svg');
+            bottom: -26px;
+            left: 195px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--large--slim--BLUE--mobile.svg');
+            bottom: -16px;
+            left: 28px;
+        }
+    }
+
+    // L--5
+    &--large--5::after{
+        content: url('/assets/icons/underline--large--5.svg');
+        position: absolute;
+        left: 199px;
+        bottom: -29px;
+        z-index: -1;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--large--5--d3.svg');
+            bottom: -33px;
+            left: 157px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--large--5--tablet.svg');
+            bottom: -18px;
+            left: 138px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--large--5--mobile.svg');
+            bottom: -19px;
+            left: 77px;
+        }
+    }
+
+    // L--6
+    &--large--6::after{
+        content: url('/assets/icons/underline--large--6.svg');
+        position: absolute;
+        left: 130px;
+        bottom: -35px;
+        z-index: -1;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--large--6--d3.svg');
+            bottom: -41px;
+            left: 89px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--large--6--tablet.svg');
+            bottom: -28px;
+            left: 104px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--large--6--mobile.svg');
+            bottom: -24px;
+            left: 53px;
+        }
+    }
+
+    // L--7
+    &--small::after{
+        content: url('/assets/icons/underline--small.svg');
+        position: absolute;
+        left: 470px;
+        bottom: -16px;
+        z-index: -1;
+
+        @include desktop-3{
+            content: url('/assets/icons/underline--small--d3.svg');
+            bottom: -27px;
+            left: 358px;
+        }
+
+        @include tablet{
+            content: url('/assets/icons/underline--small--d3.svg');
+            bottom: -52px;
+            left: 367px;
+        }
+
+        @include mobile{
+            content: url('/assets/icons/underline--small--mobile.svg');
+            bottom: -27px;
+            left: 96px;
         }
     }
 }
