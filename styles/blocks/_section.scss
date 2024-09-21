@@ -3,11 +3,11 @@
     padding-block: var(--section-padding-y);
     
     @include tablet{
-        --section-padding-y: 80px;
+        --section-padding-y: 60px;
     }
 
     @include mobile{
-        --section-padding-y: 40px;
+        --section-padding-y: 20px;
     }
 
     // модификатор заднего фона секции

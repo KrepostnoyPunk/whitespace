@@ -1,0 +1,27 @@
+.freeTrial{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    &__header{
+        max-width: 608px;
+
+        @include mobile{
+            max-width: 288px;
+        }
+
+        p{
+            margin-bottom: 16px;
+        }
+    }
+
+    &__decription{
+        max-width: 550px;
+    }
+
+    &__contacts__wrapper{
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    }
+}

@@ -34,3 +34,7 @@ h3, .h3{
 h4, .h4{
     @include elastic-text(24, 36);
 }
+
+h5, .h5{
+    @include elastic-text(20, 24);
+}
